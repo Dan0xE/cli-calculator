@@ -7,11 +7,6 @@ def clear():
 
 print("Welcome to the CLI calculator!")
 
-def exit():
-    print("\nExiting...")
-    time.sleep(2)
-    sys.exit()
-
 calcFilled = False
 
 while(calcFilled == False):
@@ -46,9 +41,6 @@ while(calcFilled == False):
     while(yValid == False):
         try:
             y = int(input("y = "))
-            if(y == KeyboardInterrupt):
-                print("\nExiting...")
-                sys.exit()
             break
         except:
             print("Invalid input")
@@ -90,13 +82,15 @@ while(calcFilled == False):
             if(q == ""):
                 print("Invalid input")
                 continue
-            
+        
             print("Goodbye!")
             sys.exit()
         if(t == "y"):
             ct = True
             valid = False
             while(valid == False):
+                clear()
+                print("current sum is: ", sum)
                 opand = input("opand = ")
                 if(opand != "+" and opand != "-" and opand != "*" and opand != "/" and opand != "x" and opand != "X"):
                     print("Invalid input | enter a valid operator")
