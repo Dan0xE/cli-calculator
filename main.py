@@ -30,7 +30,7 @@ while(calcFilled == False):
     while (oValid == False):       
         opand = input("opand = ") 
              
-        if(opand != "+" and opand != "-" and opand != "*" and opand != "/" and opand != "X" and opand != "x" and opand):
+        if(opand != "+" and opand != "-" and opand != "*" and opand != "/" and opand != "X" and opand != "x"):
             print("Invalid Operator")
             continue
         else:
